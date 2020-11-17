@@ -8,6 +8,5 @@ f = open("tabla.html", encoding="utf-8")
 txt = f.read()
 txt
 
-simpsons = re.findall(r'<td class="svtTablaTime">\s*(\d+\.\d+)\s*</td>\s*<td.*?>\s*<h4.*?>\s*Simpsons\s*</h4>', txt )
-
+simpsons = re.findall(r'<td class="svtTablaTime">\s*(\d+\.\d+)\s*</td>\s*<td.*?>\s*<h4.*?>\s*Simpsons\s*</h4>\s*<div.*?>\s*<div.*?>\s*<div.*?>\s*<p.*?>\s*([a-zA-z0-9åäöÅÄÖ .,:;!?]+)*', txt )
 print (simpsons)
